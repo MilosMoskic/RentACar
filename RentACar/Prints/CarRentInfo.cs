@@ -11,7 +11,7 @@ namespace RentACar.Prints
     public class CarRentInfo : ICarRentInfo
     {
 
-        public void printInfo(Car car)
+        public void printInfo(ICar car)
         {
             Console.WriteLine(
                               $"Manufacturer: {car.Make} \n" +

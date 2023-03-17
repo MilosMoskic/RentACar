@@ -1,20 +1,21 @@
 ﻿using RentACar.Classes;
+using RentACar.Interfaces;
 using RentACar.Prints;
 
 public class Program
 {
     public static void Main(string[] args)
     {
-        ReceiptOnEmail receiptToEmail = new ReceiptOnEmail();
-        CarRentInfo listOfCars = new CarRentInfo();
-        ReceiptInfo receiptInConsole = new ReceiptInfo();
+        IReceiptOnEmail receiptToEmail = Factory.CreateReceiptOnEmail();
+        ICarRentInfo listOfCars = Factory.CreateCarRentInfo();
+        IReceiptInfo receiptInConsole = Factory.CreateReceiptInfo();
 
-        Car car1 = new PremiumCar("Audi", "A4", "2015", 10000);
-        Car car2 = new PremiumCar("Lamborghini", "Urus", "2023", 100000);
-        Car car3 = new StandardCar("Wolksvagen", "Polo", "2010", 200);
-        Car car4 = new StandardCar("Yugo", "Koral", "1980", 500);
+        ICar car1 = Factory.CreatePremiumCar("Audi", "A4", "2015", 10000);
+        ICar car2 = Factory.CreatePremiumCar("Lamborghini", "Urus", "2023", 100000);
+        ICar car3 = Factory.CreateStandardCar("Wolksvagen", "Polo", "2010", 200);
+        ICar car4 = Factory.CreateStandardCar("Yugo", "Koral", "1980", 500);
 
-        List<Car> RentableCars = new List<Car>();
+        List<ICar> RentableCars = new List<ICar>();
         RentableCars.Add(car1);
         RentableCars.Add(car2);
         RentableCars.Add(car3);

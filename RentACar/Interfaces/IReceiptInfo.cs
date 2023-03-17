@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace RentACar.Interfaces
 {
-    internal interface IRentRecepit
+    internal interface IReceiptInfo
     {
-        public void printReceipt(Car car);
+        public void printReceipt(ICar car);
     }
 }

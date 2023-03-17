@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace RentACar.Prints
 {
-    internal class ReceiptOnEmail : IReceiptOnEmail
+    public class ReceiptOnEmail : IReceiptOnEmail
     {
         public void ReceiptSentToEmail()
         {
