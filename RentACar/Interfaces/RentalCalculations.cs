@@ -1,4 +1,4 @@
-﻿using RentACar.Interfaces;
+﻿using RentACar.Classes;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RentACar.Classes
+namespace RentACar.Interfaces
 {
     internal class RentalCalculation : IRentalCalculations
     {
@@ -16,12 +16,13 @@ namespace RentACar.Classes
         {
             RentCalculation = RentCalculations(car);
         }
-        public decimal RentCalculations(Car car) 
+        public decimal RentCalculations(Car car)
         {
             if (car.Offer == 'S')
             {
                 RegularRentCalculations(car);
-            }else if(car.Offer == 'P')
+            }
+            else if (car.Offer == 'P')
             {
                 PremiumRentCalculations(car);
             }

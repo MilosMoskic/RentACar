@@ -9,13 +9,9 @@ namespace RentACar.Classes
 {
     public class StandardCar : Car
     {
-        public StandardCar(string make, string model, string year, decimal price) 
+        public StandardCar(string make, string model, string year, decimal price) : base(make, model, year, price)
         {
-            Make = make;
-            Model = model;
-            Year = year;
             Offer = 'S';
-            Price = price;
         }
 
     }

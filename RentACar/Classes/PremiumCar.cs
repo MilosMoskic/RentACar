@@ -8,13 +8,9 @@ namespace RentACar.Classes
 {
     public class PremiumCar : Car 
     {
-        public PremiumCar(string make, string model, string year, decimal price)
+        public PremiumCar(string make, string model, string year, decimal price) : base(make, model, year, price)
         {
-            Make = make;
-            Model = model;
-            Year = year;
             Offer = 'P';
-            Price = price;
         }
 
 

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace RentACar.Interfaces
 {
-    public interface IPrintRentInfo
+    public interface ICarRentInfo
     {
         public void printInfo(Car car);
     }

@@ -5,29 +5,29 @@ public class Program
 {
     public static void Main(string[] args)
     {
-        ReceiptOnEmail rc = new ReceiptOnEmail();
-        PrintRentInfo pi = new PrintRentInfo();
-        PrintReceiptInfo pri = new PrintReceiptInfo();
+        ReceiptOnEmail receiptToEmail = new ReceiptOnEmail();
+        CarRentInfo listOfCars = new CarRentInfo();
+        ReceiptInfo receiptInConsole = new ReceiptInfo();
 
-        Car c1 = new PremiumCar("Audi", "A4", "2015", 10000);
-        Car c2 = new PremiumCar("Lamborghini", "Urus", "2023", 100000);
-        Car c3 = new StandardCar("Wolksvagen", "Polo", "2010", 200);
-        Car c4 = new StandardCar("Yugo", "Koral", "1980", 500);
+        Car car1 = new PremiumCar("Audi", "A4", "2015", 10000);
+        Car car2 = new PremiumCar("Lamborghini", "Urus", "2023", 100000);
+        Car car3 = new StandardCar("Wolksvagen", "Polo", "2010", 200);
+        Car car4 = new StandardCar("Yugo", "Koral", "1980", 500);
 
         List<Car> RentableCars = new List<Car>();
-        RentableCars.Add(c1);
-        RentableCars.Add(c2);
-        RentableCars.Add(c3);
-        RentableCars.Add(c4);
+        RentableCars.Add(car1);
+        RentableCars.Add(car2);
+        RentableCars.Add(car3);
+        RentableCars.Add(car4);
 
         foreach (var item in RentableCars)
         {
-            pi.printInfo(item);
+            listOfCars.printInfo(item);
         }
 
-        rc.Receipt();
+        receiptToEmail.ReceiptSentToEmail();
 
-        pri.printReceipt(c1);
+        receiptInConsole.printReceipt(car1);
 
     }
 }

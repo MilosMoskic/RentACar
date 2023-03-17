@@ -9,14 +9,9 @@ namespace RentACar.Prints
 {
     internal class ReceiptOnEmail : IReceiptOnEmail
     {
-        public ReceiptOnEmail()
+        public void ReceiptSentToEmail()
         {
-
-        }
-
-        public void Receipt()
-        {
-            Console.WriteLine("Do you want to get a email receipt?");
+            Console.WriteLine("Receipt has been sent to your email.");
         }
     }
 }

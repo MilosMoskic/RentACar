@@ -8,16 +8,22 @@ using System.Threading.Tasks;
 
 namespace RentACar.Classes
 {
-    public class Car
+    public class Car : ICar
     {
-        public string Make;
-        public string Model;
-        public string Year;
-        public char Offer;
-        public decimal Price;
-        public decimal RentalPrice;
+        public string Make { get; set; }
+        public string Model { get; set; }
+        public string Year { get; set; }
+        public char Offer { get; set; }
+        public decimal Price { get; set; }
+        public decimal RentalPrice { get; set; }
 
-
+        public Car(string make, string model, string year, decimal price)
+        {
+            Make = make;
+            Model = model;
+            Year = year;
+            Price = price;
+        }
         public decimal CalculateRent()
         {
             RentalCalculation calculation = new RentalCalculation(this);

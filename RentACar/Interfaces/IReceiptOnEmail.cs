@@ -8,6 +8,6 @@ namespace RentACar.Interfaces
 {
     internal interface IReceiptOnEmail
     {
-        public void Receipt();
+        public void ReceiptSentToEmail();
     }
 }
