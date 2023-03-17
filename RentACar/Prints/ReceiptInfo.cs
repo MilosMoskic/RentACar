@@ -19,7 +19,6 @@ namespace RentACar.Prints
                               $"Year of production: {car.Year}\n" +
                               $"Offer: {car.Offer}\n" +
                               $"Rental price: {car.CalculateRent()}$\n" +
-                              $"Receipt sent on email: something@gmail.com\n\n" +
                               $"Have a nice ride!");
         }
     }
