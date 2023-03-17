@@ -9,6 +9,6 @@ namespace RentACar.Interfaces
 {
     public interface ICarRentInfo
     {
-        public void printInfo(Car car);
+        public void printInfo(ICar car);
     }
 }

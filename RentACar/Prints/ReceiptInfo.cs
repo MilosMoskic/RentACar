@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace RentACar.Prints
 {
-    internal class ReceiptInfo : IRentRecepit
+    public class ReceiptInfo : IReceiptInfo
     {
-        public void printReceipt(Car car)
+        public void printReceipt(ICar car)
         {
             Console.WriteLine("\n===========================\n" +
                               "\nYour receipt:\n" +
